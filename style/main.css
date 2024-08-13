@@ -1,0 +1,424 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+html, body {
+    --width-mobile: 320px;
+    --width-tablet: 768px;
+    --width-desktop: 1120px;
+    --color-active-scroll: #B5B6BC;
+    --color-inactive-scoll: #DDDDDD;
+    --color-background-content: #F8F8F8;
+    --color-background-header: #FFFFFF;
+    --color-rose: #FF3E79;
+    --color-header-text:#7E7E82;
+    background-color: var(--color-background-content);
+}
+
+/* Mobile */
+@media only screen and (min-width: 320px) {
+    html, body {
+        overflow: hidden;
+    }
+
+    .swiper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+        height: auto;
+        padding: 16px;
+    }
+
+    .swiper__title {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        text-transform: uppercase;
+
+        width: 288px;
+        height: 48px;
+        padding: 24px 30px 16px 30px;
+        color: var(--color-header-text);
+
+        background-color: var(--color-background-header);
+    }
+
+    .swiper__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+
+        width: 100%;
+        height: auto;
+   
+        overflow-x: scroll;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+
+    .swiper__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        width: 240px;
+        height: 72px;
+
+    }
+    
+    .swiper__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: inherit;
+        height: inherit;
+        padding: 0 16px;
+
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        background-color: white;
+    }
+
+    .swiper__logo {
+        width: auto;
+        height: 25px;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+
+        border: 1px solid red;
+        border-radius: 50%;
+    }
+
+    .swiper__details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 8px;
+        height: 12px;
+    }
+
+    .swiper__scrollbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 204px;
+        height: 12px;
+        margin-top: 25px;
+        margin-left: calc((var(--width-mobile) - 240px) / 2);
+        overflow-x: auto;
+        overflow-y: hidden; 
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .scrollbar__item {
+        display: block;
+        border-radius: 50%;
+
+        width: 12px;
+        height: 12px;
+        
+        background-color: var(--color-inactive-scoll);
+
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: var(--color-active-scroll);
+    }
+
+    .wriper__button {
+        display: none;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    html, body {
+        overflow: visible;
+    } 
+ 
+    .swiper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+        height: auto;
+        padding: 16px;
+    }
+
+    .swiper__title {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        text-transform: uppercase;
+
+        width: inherit;
+        height: 48px;
+        padding: 16px;
+        color: var(--color-header-text);
+        background-color: var(--color-background-header);
+    }
+
+    .swiper__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        width: 100%;
+        height: auto;
+        max-height: calc(2 * (72px + 8px));
+   
+        overflow: hidden;
+        scrollbar-width: none;
+        scroll-behavior: none;
+        scroll-snap-type: none;
+    }
+
+    .swiper__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        width: 224px;
+        height: 72px;
+
+    }
+    
+    .swiper__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: inherit;
+        height: inherit;
+        padding: 0 16px;
+
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        background-color: white;
+    }
+
+    .swiper__logo {
+        width: auto;
+        height: 25px;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+
+        border: 1px solid red;
+        border-radius: 50%;
+    }
+
+    .swiper__details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 8px;
+        height: 12px;
+    }
+
+    .swiper__scrollbar {
+        display: none;
+    }
+
+    .scrollbar__item {
+        display: none;
+    }
+
+    .wriper__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 134px;
+        height: 24px;
+        margin-top: 30px;
+
+        background: none;
+        border: none;
+
+        cursor: pointer;
+    }
+
+    .button__vector {
+        display: block;
+    }
+
+    .button__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        margin-left: 16px;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1120px) {
+    html, body {
+        overflow: visible;
+    } 
+
+    .swiper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        width: 100%;
+        height: auto;
+        padding: 16px;
+    }
+
+    .swiper__title {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        text-transform: uppercase;
+
+        width: 100%;
+        height: 48px;
+        padding: 16px;
+        color: var(--color-header-text);
+        background-color: var(--color-background-header);
+    }
+
+    .swiper__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px 42px;
+
+        width: 100%;
+        height: auto;
+        max-height: calc(2 * (72px + 8px));
+   
+        overflow: hidden;
+        scrollbar-width: none;
+        scroll-behavior: none;
+        scroll-snap-type: none;
+    }
+
+    .swiper__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        width: 240px;
+        height: 72px;
+    }
+    
+    .swiper__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: inherit;
+        height: inherit;
+        padding: 0 16px;
+
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        background-color: white;
+    }
+
+    .swiper__logo {
+        width: auto;
+        height: 25px;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+
+        border: 1px solid red;
+        border-radius: 50%;
+    }
+
+    .swiper__details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 8px;
+        height: 12px;
+    }
+
+    .swiper__scrollbar {
+        display: none;
+    }
+
+    .scrollbar__item {
+        display: none;
+    }
+
+    .wriper__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 134px;
+        height: 24px;
+        margin-top: 30px;
+
+        background: none;
+        border: none;
+
+        cursor: pointer;
+    }
+
+    .button__vector {
+        display: block;
+    }
+
+    .button__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        margin-left: 16px;
+    }
+}
